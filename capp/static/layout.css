@@ -52,22 +52,21 @@ img {
 }
 
 .section_carbon_app_navbar .container{
-  max-width: 1400px;      /* juster 1280–1440 etter smak */
-  padding-left: 24px;
-  padding-right: 24px;
+  max-width: none;      /* juster 1280–1440 etter smak */
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .carbon_app_navbar {
+  width: 100%;
+  max-width: none;
+  padding: 0;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto; /* logo | meny | høyre */
   align-items: center;
-  height: 70px;
-  background-color: #ffffff;
-  width: 100%;            /* viktig: full breidde */
-  max-width: none;        /* overstyr gammal max-width */
-  padding: 0;             /* padding ligg på .container */
   gap: 16px;
 }
+
 .carbon_app_navbar a {
   color: #2a4359;
   padding: 10px 12px;
@@ -97,6 +96,7 @@ img {
 
 .carbon_app_navbar .logo {
   font-weight: 400;
+  margin: 0;
 }
 .text-logo {
   color: #568c63;
@@ -135,6 +135,7 @@ img {
     border-bottom: #2a4359 2px solid;
   }
 }
+
 
 
 
