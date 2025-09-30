@@ -352,68 +352,6 @@ iphone kortet
   .phone-grid .iphone-card{ margin-left: 0; margin-right: 0; }
 }
 
-/* GRIDEN */
-.dev-phones { padding: 24px 0 8px; }
-.dev-phones h2 { margin: 0 0 12px; }
-.phone-grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px 36px;
-  justify-items: center;
-}
-
-/* La seksjonen få gå nesten kant-til-kant */
-.dev-phones .container{
-  max-width: none;
-  width: 100%;
-  padding-left: 8px;   /* juster 0–16px for mer/mindre kantluft */
-  padding-right: 8px;
-}
-
-/* 4–3–4–3 layout med tett spacing */
-.phone-grid{
-  --hgap: 12px;   /* horisontal avstand mellom telefoner */
-  --vgap: 10px;   /* vertikal avstand mellom radene */
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-0.5 * var(--hgap));
-  margin-right: calc(-0.5 * var(--hgap));
-}
-
-/* standard: 4 per rad (25%) */
-.phone-grid .iphone-card{
-  margin: 0 calc(0.5 * var(--hgap)) var(--vgap);
-  flex: 0 0 calc(25% - var(--hgap));
-}
-
-/* rad 2 (og 5, 8, …): 3 per rad (33.333%) */
-.phone-grid .iphone-card:nth-child(7n+5),
-.phone-grid .iphone-card:nth-child(7n+6),
-.phone-grid .iphone-card:nth-child(7n+7){
-  flex-basis: calc(33.333% - var(--hgap));
-}
-
-/* vil du ha enda tettere mellom radene? senk --vgap, f.eks. 6px */
-/* vil du ha dem enda nærmere hverandre horisontalt? senk --hgap */
-
-/* RESPONSIVE fallbacks */
-@media (max-width: 1100px){
-  /* to per rad */
-  .phone-grid .iphone-card{
-    flex-basis: calc(50% - var(--hgap));
-  }
-  .phone-grid .iphone-card:nth-child(7n+5),
-  .phone-grid .iphone-card:nth-child(7n+6),
-  .phone-grid .iphone-card:nth-child(7n+7){
-    flex-basis: calc(50% - var(--hgap)); /* hold 2 per rad på mellomstore skjermer */
-  }
-}
-@media (max-width: 640px){
-  /* én per rad på mobil */
-  .phone-grid .iphone-card{
-    flex-basis: calc(100% - var(--hgap));
-  }
-}
 
 
 
