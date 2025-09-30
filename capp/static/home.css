@@ -8,6 +8,7 @@ Palett + typografi
 --cream-warm: #f3eddc;     /* midtseksjon-bakgrunn */
 --ink:        #1c1c1c;     /* brødtekst */
 --white:      #ffffff;
+--lightgreen  #EAFFE5
 --shadow:     0 8px 20px rgba(0,0,0,.12);
 --radius:     16px;
 }
@@ -85,7 +86,7 @@ display:flex; justify-content:flex-start; align-items:center; flex-wrap:wrap; ga
 Section: developers (midt)
 ================================ */
 .section_developers{
-background: var(--white);
+background: var(--lightgreen);
 padding: 24px 0 32px;
 }
 
@@ -94,7 +95,7 @@ display:flex;
 flex-wrap: wrap;        /* legg kort i rader */
 align-items: stretch;
 gap: 24px;
-background: var(--white);
+background: var(--lightgreen);
 padding: 8px;
 }
 
@@ -196,7 +197,7 @@ video
 }
 
 
-/* ========== CLEAN TEAM CARDS (no phone frame) ========== */
+/* ========== CLEAN TEAM CARDS ========== */
 
 /* wrapper width */
 .dev-phones .dev-wrap{
@@ -276,5 +277,6 @@ video
   .phone-grid{ gap: 22px; }
   .iphone-card .photo{ width: 160px; height: 160px; }
 }
+
 
 
