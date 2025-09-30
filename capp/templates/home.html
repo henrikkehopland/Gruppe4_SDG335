@@ -14,6 +14,13 @@
 </section>
 
 <!-- Developers -->
+<style>
+  .iphone-card{
+    --w: 240px; width: var(--w); aspect-ratio: 9/19.5; position: relative;
+    background: url('{{ url_for("static", filename="icons/iphone-frame.png") }}') center/contain no-repeat;
+  }
+  .iphone-card .screen{ position:absolute; top:7%; bottom:6%; left:8%; right:8%; border-radius:28px; background:#fff; }
+</style>
 <section class="dev-phones">
   <div class="container">
     <h2>Utviklarar</h2>
@@ -42,6 +49,7 @@
 </section>
 
 {% endblock content %}
+
 
 
 
