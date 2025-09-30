@@ -27,19 +27,12 @@
   padding: 0;
 }
 
-/* Logo (venstre) */
-.carbon_app_navbar .logo{
-  margin: 0;
-  font-size: 28px;
-  line-height: 1;
-}
-.text-logo{ color:#568c63; }
 
 /* Meny (midtstilt) */
 .carbon_app_navbar nav{ width: 100%; }
 .carbon_app_navbar ul{
   display: flex;
-  gap: 40px;
+  gap: 50px;
   justify-content: center;     /* sentrer menyen */
   align-items: center;
   margin: 0;
@@ -70,7 +63,7 @@
   transition: background .18s ease, transform .18s ease;
 }
 .carbon_app_navbar a:hover::after{
-  background: #6ecf83;       /* lys grønn highlight */
+  background: #173B33;       /* lys grønn highlight */
   transform: translateY(-1px);
 }
 
@@ -158,6 +151,7 @@
 .section_carbon_app_navbar .container{
   padding-left: 36px; /* øk/reduser etter behov */
 }
+
 
 
 
