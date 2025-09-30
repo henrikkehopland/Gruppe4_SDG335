@@ -75,12 +75,14 @@
 }
 
 /* Marker "Home" som aktiv uten å endre HTML (3. element i lista) */
-.carbon_app_navbar ul li:nth-child(3) > a::after{
-  background: #6ecf83;
+.section_carbon_app_navbar ul,
+.section_carbon_app_navbar li {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
-.carbon_app_navbar ul li:nth-child(3) > a{
-  font-weight: 700;
-}
+.section_carbon_app_navbar li::marker { content: "" !important; }
+.section_carbon_app_navbar li::before { content: none !important; }
 
 /* Høyreside (om du senere har profil e.l.) */
 .carbon_app_navbar .right{
@@ -108,6 +110,7 @@
   }
   .carbon_app_navbar a::after{ bottom: -6px; height: 4px; }
 }
+
 
 
 
