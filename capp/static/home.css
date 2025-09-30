@@ -304,5 +304,44 @@ iphone kortet
   .iphone-card{ --w: 220px; }
   .phone-grid .iphone-card{ flex-basis: calc(100% - var(--hgap)); }    /* 1 per rad */
 }
+/* iPhone-ramme (tving på igjen) */
+.iphone-card{
+  --w: 300px;                                /* bredden – juster fritt */
+  width: var(--w);
+  height: calc(var(--w) * 19.5 / 9);
+  aspect-ratio: 9 / 19.5;
+  position: relative;
+
+  background-image: url("/static/icons/iphone-frame.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+
+/* legg ramma over skjermen så den alltid syns */
+.iphone-card::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  background-size: inherit;
+  pointer-events:none;
+  z-index: 2;
+}
+
+/* selve skjermen inni ramma */
+.iphone-card .screen{
+  position:absolute; top:8.2%; bottom:7.2%; left:7.8%; right:7.8%;
+  background:#fff; border-radius:28px; overflow:hidden;
+  display:flex; flex-direction:column; align-items:center; gap:12px; padding:16px 12px 14px;
+  z-index: 1;
+}
+
+/* navn + bilde */
+.iphone-card .screen h3{ margin:0 0 6px; font-size:20px; font-weight:800; color:#0f3d24; text-align:center; }
+.iphone-card .photo{ width:80%; aspect-ratio:1/1; object-fit:cover; border-radius:22px; box-shadow:0 2px 8px rgba(0,0,0,.08); }
+.iphone-card p{ width:80%; margin:6px 0 0; font-size:12px; color:#3e3e3e; text-align:left; }
+
 
 
