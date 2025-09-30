@@ -95,10 +95,10 @@ h3{
   display:flex; align-items: stretch; gap: 24px;
   background: var(--cream-warm);
   padding: 8px;
-  flex-wrap: wrap;           /* radbryting for mindre skjermer */
+  flex-wrap: wrap;         
 }
 .developers .box{
-  flex: 1 1 320px;           /* kortbreidde ~ som i malen */
+  flex: 1 1 320px;          
   background: var(--green-sage);
   color: var(--white);
   border-radius: var(--radius);
@@ -125,9 +125,9 @@ h3{
 /* runde profilbilete med svak skygge */
 .developers .box img{
   width: 160px;
-  height: 160px;          /* lik bredde/høyde = perfekt sirkel */
+  height: 160px;         
   border-radius: 50%;
-  object-fit: cover;      /* fyller sirkelen uten å bli skeivt */
+  object-fit: cover;    
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
@@ -173,5 +173,6 @@ h3{
   .header_home{ flex-direction: column; text-align:left; }
   .developers{ flex-direction: column; }
 }
+
 
 
