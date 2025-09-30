@@ -29,7 +29,7 @@ color: var(--ink);
 }
 
 h1,h2,h3{
-color: var(--white);
+color: var(--green-deep);
 letter-spacing: .3px;
 line-height: 1.15;
 margin: 0 0 .4em 0;
@@ -317,6 +317,7 @@ iphone kortet
   .phone-grid{ grid-template-columns: 1fr; }
   .iphone-card{ --w: 200px; }
 }
+
 
 
 
