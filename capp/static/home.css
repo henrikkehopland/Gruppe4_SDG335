@@ -310,13 +310,16 @@ iphone kortet
 
 /* RESPONSIVT */
 @media (max-width: 1100px){
-  .phone-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .phone-grid{ grid-template-columns: repeat(4, 280px);
+  gap: 16px 24px;
+  justify-content: center;}
   .iphone-card{ --w: 210px; }
 }
 @media (max-width: 680px){
   .phone-grid{ grid-template-columns: 1fr; }
   .iphone-card{ --w: 200px; }
 }
+
 
 
 
