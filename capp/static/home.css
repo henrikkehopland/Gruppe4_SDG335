@@ -278,6 +278,38 @@ video
   .iphone-card .photo{ width: 160px; height: 160px; }
 }
 
+/* Bakgrunn på seksjonen med teamet */
+.dev-phones{ 
+  background: var(--lightgreen);   /* pastellgrøn bakgrunn */
+  padding: 24px 0 40px;
+}
+
+/* Alternativ: gradient bakgrunn (bruk denne i staden for linja over) */
+/*
+.dev-phones{
+  background: linear-gradient(180deg, #EAFFE5 0%, #ffffff 100%);
+}
+*/
+
+/* Farger/stil på korta (boksene) */
+.iphone-card{
+  background: #ffffff;                           /* selve boksfargen */
+  border: 1px solid #e3efe4;                     /* kantlinje */
+  box-shadow: 0 10px 24px rgba(31,77,46,.08);    /* mjuk skugge */
+  border-radius: 20px;
+}
+
+/* Hover (valfritt) */
+.iphone-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(31,77,46,.14);
+}
+
+/* Tittel- og tekstfargar inne i kortet */
+.iphone-card .screen h3{ color: var(--green-deep); }
+.iphone-card p{ color:#3e3e3e; }
+
+
 
 
 
