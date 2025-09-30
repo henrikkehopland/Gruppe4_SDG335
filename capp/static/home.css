@@ -29,7 +29,7 @@ color: var(--ink);
 }
 
 h1,h2,h3{
-color: var(--green-deep);
+color: var(--white);
 letter-spacing: .3px;
 line-height: 1.15;
 margin: 0 0 .4em 0;
@@ -53,7 +53,7 @@ font-weight: 700;
 Section: header_home (topp)
 ================================ */
 .section_header_home{
-background: var(--blue-pastel);
+background: var(--white);
 padding: 24px 0;
 }
 .header_home{
@@ -61,7 +61,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 24px;
-background: var(--blue-pastel);
+background: var(--white);
 padding: 12px 8px 32px;
 }
 .header_home .box{
@@ -85,7 +85,7 @@ display:flex; justify-content:flex-start; align-items:center; flex-wrap:wrap; ga
 Section: developers (midt)
 ================================ */
 .section_developers{
-background: var(--cream-warm);
+background: var(--white);
 padding: 24px 0 32px;
 }
 
@@ -94,7 +94,7 @@ display:flex;
 flex-wrap: wrap;        /* legg kort i rader */
 align-items: stretch;
 gap: 24px;
-background: var(--cream-warm);
+background: var(--white);
 padding: 8px;
 }
 
@@ -103,7 +103,7 @@ padding: 8px;
 .developers .box2{
 flex: 1 1 320px;        /* min-breidde per kort */
 max-width: 480px;       /* ikkje bli for brei */
-background: var(--green-sage);
+background: var(--white);
 color: var(--white);
 border-radius: var(--radius);
 padding: 24px 20px 20px;
@@ -155,7 +155,7 @@ display:inline-block;
 padding: 12px 22px;
 margin: 4px 0 0;
 color: var(--white);
-background: var(--green-deep);
+background: var(--white);
 border: none;
 border-radius: 999px;     /* pill */
 text-decoration:none;
@@ -182,3 +182,4 @@ h1{ font-size: clamp(26px, 6.5vw, 48px); }
 .header_home{ flex-direction: column; text-align:left; }
 .developers{ flex-direction: column; }
 }
+
