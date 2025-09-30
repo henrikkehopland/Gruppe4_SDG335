@@ -46,32 +46,55 @@ img {
 /* Navbar  */
 .section_carbon_app_navbar {
   background-color:#ffffff;
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+
 }
-.carbon_app_navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: 70px;
-  align-items: center;
-  background-color: #ffffff;
-  max-width: 1400px;      /* prøv 1280–1440 etter smak */
+
+.section_carbon_app_navbar .container{
+  max-width: 1400px;      /* juster 1280–1440 etter smak */
   padding-left: 24px;
   padding-right: 24px;
 }
+
+.carbon_app_navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  height: 70px;
+  background-color: #ffffff;
+  width: 100%;            /* viktig: full breidde */
+  max-width: none;        /* overstyr gammal max-width */
+  padding: 0;             /* padding ligg på .container */
+  gap: 16px;
+}
 .carbon_app_navbar a {
-  color: #ffffff;
-  padding: 10px 20px;
-  margin: 0 5px;
-  font-size: 20px;
+  color: #2a4359;
+  padding: 10px 12px;
+  margin: 0 4px;
+  font-size: 18px;
   text-decoration: none;
+  border-bottom: 4px solid transparent;
 }
 .carbon_app_navbar a:hover{
-  border-bottom: #2a4359 4px solid;
+  color: #466fa6;
+  border-bottom-color: #2a4359;
 }
 .carbon_app_navbar ul {
   display: flex;
   flex-direction: row;
+  justify-self: center;   /* sentrer i grid-spalta */
+  gap: 8px;
+  margin: 0;
 }
+
+.carbon_app_navbar .right{
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .carbon_app_navbar .logo {
   font-weight: 400;
 }
@@ -112,6 +135,7 @@ img {
     border-bottom: #2a4359 2px solid;
   }
 }
+
 
 
 
