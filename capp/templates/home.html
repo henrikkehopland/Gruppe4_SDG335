@@ -13,39 +13,6 @@
 
 </section>
 
-<!-- Header -->
-<section class="section_header_home">
-<div class="container">
-
-
-<div class="header_home">
-  <div class="box">
-    <h1 style="font-size:55px;"><span class="text-logo"> Home Page</span></h1>
-    <p style="text-align:left;">
-      This is our home page </p>
-    <div class="container_buttons_links_header_home">
-      <div class="btn">
-          <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#ffffff;">Register</a>
-      </div>
-      <div class="btn">
-          <a href="{{url_for('users.login')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#ffffff;">Login</a>
-      </div>
-    </div>
-  </div>
-  <div class="box">
-    <img
-      src="{{url_for('static', filename='icons/carbon_app.svg')}}"
-      width="325"
-      height="325"
-      alt=""/>
-  </div>
-</div>
-
-
-
-</div>
-</section>
-
 <!-- Developers -->
 <section class="section_developers">
 <div class="container">
@@ -144,6 +111,7 @@
 </section>
 
 {% endblock content %}
+
 
 
 
