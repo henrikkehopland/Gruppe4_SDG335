@@ -8,7 +8,7 @@ Palett + typografi
 --cream-warm: #f3eddc;     /* midtseksjon-bakgrunn */
 --ink:        #1c1c1c;     /* brødtekst */
 --white:      #ffffff;
---lightgreen: #EAFFE5
+--lightgreen: #EAFFE5;
 --shadow:     0 8px 20px rgba(0,0,0,.12);
 --radius:     16px;
 }
@@ -54,7 +54,7 @@ font-weight: 700;
 Section: header_home (topp)
 ================================ */
 .section_header_home{
-background: var(--lightgreen));
+background: var(--lightgreen);
 padding: 24px 0;
 }
 .header_home{
@@ -62,7 +62,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 24px;
-background: var(--lightgreen));
+background: var(--lightgreen);
 padding: 12px 8px 32px;
 }
 .header_home .box{
@@ -104,8 +104,8 @@ padding: 8px;
 .developers .box2{
 flex: 1 1 320px;        /* min-breidde per kort */
 max-width: 480px;       /* ikkje bli for brei */
-background: var(--lightgreen));
-color: var(--lightgreen));
+background: var(--lightgreen);
+color: var(--lightgreen);
 border-radius: var(--radius);
 padding: 24px 20px 20px;
 text-align: center;
@@ -120,7 +120,7 @@ margin: 0;             /* vi brukar gap i staden */
 
 .developers .box h3,
 .developers .box2 h3{
-color: var(--lightgreen));
+color: var(--lightgreen);
 margin-top: 8px;
 }
 .developers .box p,
@@ -155,8 +155,8 @@ padding: 8px 0 0;
 display:inline-block;
 padding: 12px 22px;
 margin: 4px 0 0;
-color: var(--lightgreen));
-background: var(--lightgreen));
+color: var(--lightgreen);
+background: var(--lightgreen);
 border: none;
 border-radius: 999px;     /* pill */
 text-decoration:none;
@@ -170,7 +170,7 @@ transition: transform .08s ease, filter .2s ease;
 .btn_developers:hover{
 filter: brightness(1.05);
 transform: translateY(-1px);
-color: var(--lightgreen));
+color: var(--lightgreen);
 }
 
 /* ================================
@@ -277,6 +277,7 @@ video
   .phone-grid{ gap: 22px; }
   .iphone-card .photo{ width: 160px; height: 160px; }
 }
+
 
 
 
