@@ -1,157 +1,138 @@
-{% extends "base.html" %}
-{% block title %}Carbon App — Home{% endblock %}
-
+{% extends "layout.html" %}
 {% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 
-<header class="navbar">
-  <div class="container nav-inner">
-    <a class="brand" href="{{ url_for('home') }}">Carbon App</a>
-    <nav class="nav-links">
-      <a href="{{ url_for('home') }}" aria-current="page">Home</a>
-      <a href="{{ url_for('methodology') }}">Methodology</a>
-      <a href="{{ url_for('carbon_app') }}">Carbon App</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn btn-ghost" href="{{ url_for('register') }}">Register</a>
-      <a class="btn btn-primary" href="{{ url_for('login') }}">Login</a>
-    </div>
-  </div>
-</header>
+<!-- Header -->
+<section class="section_header_home">
+<div class="container">
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <h1>Together, companies can halt climate change</h1>
-      <p>We provide practical tools for individuals to consider the climate impact of their transportation choices.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="{{ url_for('explore') }}">Explore</a>
-        <a class="btn btn-outline" href="{{ url_for('carbon_app') }}">Discover the Carbon App</a>
+```
+<div class="header_home">
+  <div class="box">
+    <h1 style="font-size:55px;"><span class="text-logo"> Home Page</span></h1>
+    <p style="text-align:left;">
+      This is our home page </p>
+    <div class="container_buttons_links_header_home">
+      <div class="btn">
+          <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Register</a>
+      </div>
+      <div class="btn">
+          <a href="{{url_for('users.login')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Login</a>
       </div>
     </div>
-    <div class="hero-images">
-      <img src="{{ url_for('static', filename='images/hero-1.jpg') }}" alt="Nature">
-      <img src="{{ url_for('static', filename='images/hero-2.jpg') }}" alt="Nature">
-    </div>
   </div>
+  <div class="box">
+    <img
+      src="{{url_for('static', filename='icons/carbon_app.svg')}}"
+      width="325"
+      height="325"
+      alt=""/>
+  </div>
+</div>
+
+```
+
+</div>
 </section>
 
-<section class="section light">
-  <div class="container">
-    <h2>Understanding the Carbon App</h2>
-    <p class="lede">
-      Our innovative Carbon App is designed to revolutionize how companies approach sustainability by tackling one of the
-      most significant contributors to carbon emissions: employee commuting.
-    </p>
+<!-- Developers -->
+<section class="section_developers">
+<div class="container">
 
-    <div class="features">
-      <article class="card">
-        <img src="{{ url_for('static', filename='images/feature-1.jpg') }}" alt="">
-        <h3>Calculate Carbon Footprint</h3>
-        <p>Determine carbon emissions from employee commutes using our intuitive interface.</p>
-      </article>
+```
+<div class="developers" style="display:block;">
+  <h1 style="text-align:center;"> Our Team</h1>
+  <p>
+    Our team of economists and developers ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, ut? Praesentium quidem sunt perspiciatis doloremque fugiat nesciunt quaerat ullam, pariatur iure unde ratione ipsum adipisci repellendus, repudiandae hic sit, temporibus molestias corrupti aut soluta sequi! Architecto deleniti expedita nisi repudiandae enim eum quas odit facilis placeat neque porro, animi incidunt consectetur. Maiores ab saepe tempora, iure asperiores beatae suscipit cum ipsum, rerum doloremque reprehenderit dolorum debitis, aliquam quasi. Maiores corporis fuga quasi nesciunt dolor iste, inventore necessitatibus unde!
+  </p>
+</div>
 
-      <article class="card">
-        <img src="{{ url_for('static', filename='images/feature-2.jpg') }}" alt="">
-        <h3>Tailored Sustainability Plans</h3>
-        <p>Receive customized plans with actionable strategies to reduce emissions from commuting.</p>
-      </article>
-
-      <article class="card">
-        <img src="{{ url_for('static', filename='images/feature-3.jpg') }}" alt="">
-        <h3>Engage Employees</h3>
-        <p>Motivate employees with incentives and gamified challenges to adopt eco-friendly habits.</p>
-      </article>
-    </div>
-
-    <div class="center">
-      <a class="btn btn-primary" href="{{ url_for('carbon_app') }}">Try the Carbon App</a>
-    </div>
-  </div>
-</section>
-
-<section class="section team">
-  <div class="container">
-    <h2>Meet our team</h2>
-    <p class="lede">Get to know the faces behind our mission and join us in shaping a brighter, greener future.</p>
-
-    <div class="team-grid">
-      <!-- Kopier/endre blokker for fleire personar -->
-      <article class="person">
-        <img class="avatar" src="{{ url_for('static', filename='images/team-linda.jpg') }}" alt="Dortmans Linda">
-        <h3>Dortmans Linda</h3>
-        <p>Project lead</p>
-        <a class="btn btn-ghost" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-      </article>
-
-      <article class="person">
-        <img class="avatar" src="{{ url_for('static', filename='images/team-jean.jpg') }}" alt="d'Huart Jean">
-        <h3>d'Huart Jean</h3>
-        <p>Data & Methodology</p>
-        <a class="btn btn-ghost" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-      </article>
-
-      <article class="person">
-        <img class="avatar" src="{{ url_for('static', filename='images/team-robin.jpg') }}" alt="Grégoire Robin">
-        <h3>Grégoire Robin</h3>
-        <p>Design</p>
-        <a class="btn btn-ghost" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-      </article>
-
-      <article class="person">
-        <img class="avatar" src="{{ url_for('static', filename='images/team-olaf.jpg') }}" alt="Boćko Olaf">
-        <h3>Boćko Olaf</h3>
-        <p>Engineering</p>
-        <a class="btn btn-ghost" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-      </article>
-    </div>
-
-    <div class="cta-panel">
-      <h3>Join the many who've taken the plunge. Why not you?</h3>
-      <p>
-        Discover the power of collective action by joining the growing community of changemakers.
-        Together, we can drive meaningful change in the fight against carbon emissions.
+<div class="developers">
+    <div class="box">
+      <img src="{{ url_for('static', filename='icons/henrikkehopland.jpg') }}" alt="Profilbilete" style="border-radius: 50%; width:200px;">
+      <h3>Henrikke Hopland</h3>
+      <p> Økonomi og Administrasjon, HVL Bergen
       </p>
-      <a class="btn btn-primary" href="{{ url_for('carbon_app') }}">Try the Carbon App</a>
+      <div class="section_container_buttons_developers">
+        <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="{{ url_for('static', filename='icons/thealouiseveivog.jpg') }}" alt="Profilbilete" style="border-radius: 50%; width:200px;">
+      <h3>Thea Louise Veivåg</h3>
+      <p> Økonomi og Administrasjon, HVL Bergen
+      </p>
+      <div class="section_container_buttons_developers">
+        <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="<https://randomuser.me/api/portraits/men/12.jpg>" alt="" style="border-radius: 50%; width:200px;">
+      <h3>Nora Hjelle</h3>
+      <p> Økonomi og Administrasjon, HVL Bergen
+      </p>
+      <div class="section_container_buttons_developers">
+        <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+      </div>
+    </div>
+</div>
+
+<div class="developers">
+  <div class="box">
+    <img src="<https://randomuser.me/api/portraits/women/12.jpg>" alt="" style="border-radius: 50%; width:200px;">
+    <h3>Kajsa Austbø</h3>
+    <p>  Økonomi og Administrasjon, HVL Bergen
+    </p>
+    <div class="section_container_buttons_developers">
+      <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
     </div>
   </div>
+
+  <div class="box">
+    <img src="<https://randomuser.me/api/portraits/women/13.jpg>" alt="" style="border-radius: 50%; width:200px;">
+    <h3>Emma Dahl Sørbo</h3>
+    <p> Økonomi og Administrasjon, HVL Bergen
+    </p>
+    <div class="section_container_buttons_developers">
+      <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+    </div>
+  </div>
+
+  <div class="box">
+    <img src="<https://randomuser.me/api/portraits/women/13.jpg>" alt="" style="border-radius: 50%; width:200px;">
+    <h3>Muriel Blok</h3>
+    <p> Økonomi og Administrasjon, HVL Haugesund
+    </p>
+    <div class="section_container_buttons_developers">
+      <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+    </div>
+  </div>
+
+```
+
+</div>
+
+```
+<div class="developers">
+  <div class="box">
+    <img src="<https://randomuser.me/api/portraits/women/13.jpg>" alt="" style="border-radius: 50%; width:200px;">
+    <h3>Maria Olsen</h3>
+    <p> Økonomi og Administrasjon, HVL Bergen
+    </p>
+    <div class="section_container_buttons_developers">
+      <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+    </div>
+  </div>
+  </div>
+
+```
+
+</div>
+
 </section>
 
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <div class="brand">Carbon App</div>
-    </div>
-    <nav>
-      <h4>Explore</h4>
-      <a href="{{ url_for('home') }}">Home</a>
-      <a href="{{ url_for('methodology') }}">Methodology</a>
-      <a href="{{ url_for('carbon_app') }}">Carbon App</a>
-    </nav>
-    <nav>
-      <h4>Quick access</h4>
-      <a href="{{ url_for('register') }}">Register</a>
-      <a href="{{ url_for('login') }}">Login</a>
-    </nav>
-    <div>
-      <h4>Join the movement</h4>
-      <p>We provide practical tools for individuals to consider the climate impact of their transportation choices.</p>
-      <a class="btn btn-primary" href="{{ url_for('carbon_app') }}">Try the Carbon App</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <span>2023–2024 | Carbon App is a project carried out as part of HVL©</span>
-    <img class="footer-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
-  </div>
-</footer>
-{% endblock %}
-
-
-
-
-
-
-
+{% endblock content %}
 
 
 
