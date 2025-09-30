@@ -335,8 +335,8 @@ iphone kortet
 .iphone-card{ --w: 280px; }
 
 /* --- Stagger / trappetrinn-effekt --- */
-.phone-grid .iphone-card:nth-child(3n+2){ margin-top: 60px; }  /* kolonne 2 */
-.phone-grid .iphone-card:nth-child(3n+3){ margin-top: 100px; } /* kolonne 3 */
+.phone-grid .iphone-card:nth-child(3n+2){ margin-top: 24px; }  /* kolonne 2 */
+.phone-grid .iphone-card:nth-child(3n+3){ margin-top: 40px; } /* kolonne 3 */
 
 /* Valfritt: jamn ut siste raden litt når det blir mange kort */
 .phone-grid .iphone-card:last-child{ margin-bottom: 40px; }
@@ -345,7 +345,7 @@ iphone kortet
 @media (max-width: 1100px){
   .phone-grid{
     grid-template-columns: repeat(3, 260px);
-    gap: 16px 24px;
+    gap: 8px 24px;
   }
   .phone-grid .iphone-card{ margin-top: 0; }   /* slå av stagger på 2 kolonnar */
   .phone-grid .iphone-card:nth-child(2n){ margin-top: 40px; } /* mild stagger */
@@ -358,6 +358,7 @@ iphone kortet
   .iphone-card{ --w: 260px; }
   .phone-grid .iphone-card{ margin-top: 0; }  /* ingen stagger på mobil */
 }
+
 
 
 
