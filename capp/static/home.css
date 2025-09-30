@@ -128,9 +128,9 @@ h3{
   height: 160px;         
   border-radius: 50%;
   object-fit: cover;    
-  border: none !important;
+  border:6px solid rgba(255,255,255,.35);
   outline: none !important;
-  box-shadow: none !important;
+  box-shadow:  0 6px 14px rgba(0,0,0,.18);
   background: transparent;
 }
 
@@ -173,6 +173,7 @@ h3{
   .header_home{ flex-direction: column; text-align:left; }
   .developers{ flex-direction: column; }
 }
+
 
 
 
