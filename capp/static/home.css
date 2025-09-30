@@ -191,7 +191,7 @@ h1{ font-size: clamp(26px, 6.5vw, 48px); }
 }
 
 /* ================================
-video
+header video
 ================================ */
 
 .hero-video{ position: relative; width: 100%; background: #000; }
@@ -216,6 +216,31 @@ video
   background: transparent;
 }
 
+/* ================================
+info video
+================================ */
+
+.home page info{ position: relative; width: 100%; background: #000; }
+.home page info{
+  display: block;
+  width: 100%;
+  height: auto;               /* ingen cropping */
+  object-fit: contain;        /* tryggleik om høgde blir sett ein annan plass */
+}
+
+/* Fjern svart bakgrunn + skjul ev. 1px-gap */
+.home page info{
+  background: transparent;   /* var #000 */
+  line-height: 0;            /* eliminerer inline-gap */
+  overflow: hidden;          /* skjuler subpiksel-linje */
+}
+.home page info video{
+  display: block;            /* ingen inline-gap */
+  width: 100%;
+  height: auto;
+  object-fit: cover;         /* evt. cover i staden for contain, fyller hele bredda */
+  background: transparent;
+}
 
 /* ========== CLEAN TEAM CARDS ========== */
 
@@ -355,6 +380,7 @@ hr {
 
 /* om det fortsatt skimtes en 1px kant: overlapp 1px */
 .hero-video{ margin-bottom: -1px; }
+
 
 
 
