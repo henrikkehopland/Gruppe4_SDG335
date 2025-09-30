@@ -326,7 +326,7 @@ iphone kortet
 .phone-grid{
   display: grid;
   grid-template-columns: repeat(3, 280px);  /* breidde per telefon */
-  gap: 16px 28px;                            /* rad- og kolonnemellomrom */
+  gap: 16px 18px;                            /* rad- og kolonnemellomrom */
   justify-content: center;                   /* midt på sida */
   align-items: start;
 }
@@ -358,6 +358,7 @@ iphone kortet
   .iphone-card{ --w: 260px; }
   .phone-grid .iphone-card{ margin-top: 0; }  /* ingen stagger på mobil */
 }
+
 
 
 
