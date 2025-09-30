@@ -112,6 +112,32 @@
 }
 
 
+/* --- Nytt frå CHAT --- */
+/* --- Større menytekst --- */
+.carbon_app_navbar a{
+  font-size: 18px;               /* var 16px */
+}
+@media (min-width: 1200px){
+  .carbon_app_navbar a{ font-size: 19px; }
+}
+
+/* --- Trekk logoen inn fra venstre kant --- */
+.section_carbon_app_navbar .container{
+  padding-left: 36px;            /* øk til 36–48px etter smak */
+  padding-right: 16px;
+}
+@media (min-width: 1440px){
+  .section_carbon_app_navbar .container{ padding-left: 48px; }
+}
+
+/* --- Litt større logo/ordmerke og finjuster ikonet --- */
+.carbon_app_navbar .logo{
+  font-size: 30px;               /* var 28px */
+}
+.carbon_app_navbar .logo .fa-leaf{
+  margin-right: 6px;
+  transform: translateY(1px);
+}
 
 
 
