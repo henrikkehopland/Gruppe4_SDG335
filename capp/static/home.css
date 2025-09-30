@@ -202,6 +202,20 @@ video
   object-fit: contain;        /* tryggleik om høgde blir sett ein annan plass */
 }
 
+/* Fjern svart bakgrunn + skjul ev. 1px-gap */
+.hero-video{
+  background: transparent;   /* var #000 */
+  line-height: 0;            /* eliminerer inline-gap */
+  overflow: hidden;          /* skjuler subpiksel-linje */
+}
+.hero-video video{
+  display: block;            /* ingen inline-gap */
+  width: 100%;
+  height: auto;
+  object-fit: cover;         /* evt. cover i staden for contain, fyller hele bredda */
+  background: transparent;
+}
+
 
 /* ========== CLEAN TEAM CARDS ========== */
 
@@ -314,6 +328,7 @@ video
 /* Tittel- og tekstfargar inne i kortet */
 .iphone-card .screen h3{ color: var(--green-deep); }
 .iphone-card p{ color:#3e3e3e; }
+
 
 
 
