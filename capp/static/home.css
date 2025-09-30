@@ -211,12 +211,11 @@ Iphone ramme
 
 /* iPhone-kortet */
 .iphone-card{
-  /* breidde og skala – juster fritt */
   --w: 240px;
   width: var(--w);
-  aspect-ratio: 9 / 19.5;                 /* høg telefon */
+  aspect-ratio: 9 / 19.5;
   position: relative;
-  background: url("{{ url_for('static', filename='icons/iphone-frame.png') }}") center/contain no-repeat;
+  background: url("/static/icons/iphone-frame.png") center/contain no-repeat;
 }
 
 /* “Skjermen” (innhaldet) legg vi oppå bakgrunnsramma */
@@ -270,6 +269,7 @@ Iphone ramme
   .phone-grid{ grid-template-columns: 1fr; }
   .iphone-card{ --w: 200px; }
 }
+
 
 
 
