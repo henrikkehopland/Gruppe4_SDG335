@@ -330,6 +330,32 @@ video
 .iphone-card p{ color:#3e3e3e; }
 
 
+/* fjern alle mulige streker mellom video og neste seksjon */
+.hero-video,
+.dev-phones,
+.section_developers,
+.section_header_home,
+section {
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+/* skjul evt. hr-separatorer over/under video */
+.hero-video + hr,
+hr + .dev-phones,
+hr {
+  display: none !important;
+}
+
+/* eliminér subpiksel-linje fra video */
+.hero-video{ background: transparent; line-height: 0; overflow: hidden; }
+.hero-video video{ display:block; width:100%; height:auto; object-fit: cover; background:transparent; }
+
+/* om det fortsatt skimtes en 1px kant: overlapp 1px */
+.hero-video{ margin-bottom: -1px; }
+
 
 
 
