@@ -151,6 +151,11 @@
   padding-left: 36px; /* øk/reduser etter behov */
 }
 
+/* Fjerne strek */
+.section_carbon_app_navbar{
+  border-bottom: 0 !important;
+  box-shadow: none; /* valgfritt */
+}
 
 
 
