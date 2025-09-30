@@ -195,24 +195,75 @@ video
   object-fit: contain;        /* tryggleik om høgde blir sett ein annan plass */
 }
 
-/* ================================
-Iphone ramme
-================================ */
+/* GRIDEN */
+.dev-phones { padding: 24px 0 8px; }
+.dev-phones h2 { margin: 0 0 12px; }
+.phone-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 36px;
+  justify-items: center;
+}
 
-/* iPhone-kortet – med høyde-fallback og sikker URL */
+/* iPhone-kortet */
 .iphone-card{
+  /* breidde og skala – juster fritt */
   --w: 240px;
   width: var(--w);
-
-  /* Fallback for nettlesere uten aspect-ratio */
-  height: calc(var(--w) * 19.5 / 9);  /* ~2.1667 * width */
-
-  /* Når aspect-ratio finnes, vinner denne og overstyrer height */
-  aspect-ratio: 9 / 19.5;
-
+  aspect-ratio: 9 / 19.5;                 /* høg telefon */
   position: relative;
-  background-image: url("/static/icons/iphone-frame.png"); /* SIKKER sti */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url("{{ url_for('static', filename='icons/iphone-frame.png') }}") center/contain no-repeat;
 }
+
+/* “Skjermen” (innhaldet) legg vi oppå bakgrunnsramma */
+.iphone-card .screen{
+  position: absolute;
+  /* finjuster desse prosentane etter ramma di */
+  top: 7%;
+  bottom: 6%;
+  left: 8%;
+  right: 8%;
+
+  border-radius: 28px;                    /* runda skjermhjørne */
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 14px;
+  text-align: left;
+  overflow: hidden;                        /* klipp innhald i hjørna */
+}
+
+/* Namn + tekst */
+.iphone-card h3{
+  margin: 6px 0 8px;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.iphone-card p{
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: #4a4a4a;
+}
+
+/* Biletet på “skjermen” */
+.iphone-card .photo{
+  width: 78%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 18px;                     /* runda foto slik som i skissa */
+  margin: 2px 0 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+/* RESPONSIVT */
+@media (max-width: 1100px){
+  .phone-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .iphone-card{ --w: 210px; }
+}
+@media (max-width: 680px){
+  .phone-grid{ grid-template-columns: 1fr; }
+  .iphone-card{ --w: 200px; }
+}
+
