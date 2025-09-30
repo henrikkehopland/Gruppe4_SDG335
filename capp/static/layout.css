@@ -45,7 +45,7 @@ img {
 }
 /* Navbar  */
 .section_carbon_app_navbar {
-  background-color:#8bbbd9;
+  background-color:#788F55;
 }
 .carbon_app_navbar {
   display: flex;
@@ -78,7 +78,7 @@ img {
 }
 /* Footer  */
 .section_footer{
-  background-color:#8bbbd9;
+  background-color:#788F55;
 }
 .footer {
   display: flex;
@@ -86,7 +86,7 @@ img {
   justify-content: center;
   height: 70px;
   align-items: center;
-  background-color: #8bbbd9;
+  background-color: #788F55;
   padding: 0 0px;
 }
 
@@ -110,3 +110,4 @@ img {
     border-bottom: #2a4359 2px solid;
   }
 }
+
