@@ -4,7 +4,7 @@
 .section_carbon_app_navbar{
   width: 100%;
   background:#fff;
-  border-bottom: 1px solid rgba(0,0,0,.08);
+  border-bottom: 0px solid rgba(0,0,0,.08);
 }
 
 /* Fjern max-width for container KUN i headeren */
@@ -32,7 +32,7 @@
 .carbon_app_navbar nav{ width: 100%; }
 .carbon_app_navbar ul{
   display: flex;
-  gap: 50px;
+  gap: 60px;
   justify-content: center;     /* sentrer menyen */
   align-items: center;
   margin: 0;
@@ -151,6 +151,7 @@
 .section_carbon_app_navbar .container{
   padding-left: 36px; /* øk/reduser etter behov */
 }
+
 
 
 
