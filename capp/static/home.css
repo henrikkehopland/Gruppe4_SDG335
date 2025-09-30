@@ -8,7 +8,7 @@ Palett + typografi
 --cream-warm: #f3eddc;     /* midtseksjon-bakgrunn */
 --ink:        #1c1c1c;     /* brødtekst */
 --white:      #ffffff;
---lightgreen  #EAFFE5
+--lightgreen: #EAFFE5
 --shadow:     0 8px 20px rgba(0,0,0,.12);
 --radius:     16px;
 }
@@ -277,6 +277,7 @@ video
   .phone-grid{ gap: 22px; }
   .iphone-card .photo{ width: 160px; height: 160px; }
 }
+
 
 
 
