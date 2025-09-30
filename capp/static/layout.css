@@ -140,6 +140,25 @@
 }
 
 
+/* --- LOGO --- */
+
+.carbon_app_navbar .logo{
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+.logo-img{
+  height: 28px;    /* f.eks. 28–36px */
+  width: auto;
+  display: block;
+}
+
+/* Litt innrykk fra venstre kant hvis ønsket */
+.section_carbon_app_navbar .container{
+  padding-left: 36px; /* øk/reduser etter behov */
+}
+
 
 
 
