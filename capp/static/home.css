@@ -205,160 +205,57 @@ video
   justify-items: center;
 }
 
-/* ================================
-iphone kortet
-================================ */
-.iphone-card{
-  --w: 240px;
-  width: var(--w);
-  height: calc(var(--w) * 19.5 / 9);  /* fallback viss aspect-ratio manglar */
-  aspect-ratio: 9 / 19.5;
-
-  position: relative;
-  background-image: url("/static/icons/iphone-frame.png"); /* ← rett sti */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+/* La seksjonen få gå nesten kant-til-kant */
+.dev-phones .container{
+  max-width: none;
+  width: 100%;
+  padding-left: 8px;   /* juster 0–16px for mer/mindre kantluft */
+  padding-right: 8px;
 }
 
-/* valfritt: legg ramma OPPÅ innhaldet for å vere sikker at ho synest */
-.iphone-card::before{
-  content:"";
-  position:absolute; inset:0;
-  background-image: inherit;
-  background-position: inherit;
-  background-repeat: inherit;
-  background-size: inherit;
-  pointer-events:none;
-  z-index: 2; /* ovanfor skjermen */
-}
-
-/* då må skjermen ligge under ramma: */
-.iphone-card .screen{
-  position:absolute; top:7%; bottom:6%; left:8%; right:8%;
-  border-radius:28px; background:#fff; overflow:hidden;
-  display:flex; flex-direction:column; align-items:center; padding:10px 10px 14px;
-  z-index: 1;
-}
-
-/* iPhone-ramme som bakgrunn */
-.iphone-card{
-  --w: 320px;                 /* bredden på telefonen, juster fritt */
-  width: var(--w);
-  height: calc(var(--w) * 19.5 / 9);
-  aspect-ratio: 9 / 19.5;
-  position: relative;
-  background-image: url("/static/icons/iphone-frame.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-/* Skjermen ligger INNI ramma – fyll, runde hjørner */
-.iphone-card .screen{
-  display: flex;
-  flex-direction: column;        /* namn over bilde */
-  justify-content: flex-start;   /* start øverst, vi lager luft med padding */
-  align-items: center;
-  gap: 10px;
-  padding: 16px 12px;
-  position: absolute;/* finjuster disse prosentene til ramma di passer perfekt */
-  top: 8.2%;
-  bottom: 7.2%;
-  left: 7.8%;
-  right: 7.8%;
-
-  background: #fff;
-  border-radius: 28px;
-  overflow: hidden;
-
-  /* midtstill ALT inni skjermen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;     /* ← vertikalt sentrum */
-  align-items: center;         /* ← horisontalt sentrum */
-  gap: 10px;
-  padding: 10px;
-  z-index: 1;
-}
-
-/* Bildet på skjermen – stort og midtstilt */
-.iphone-card .photo{
-  width: 70%;                  /* juster 70–85% etter smak */
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 18px;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
-
-/* Tekst under bildet */
-.iphone-card h3{
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 700;
-}
-.iphone-card p{
-  margin: 0;
-  font-size: 11px;
-  color: #4a4a4a;
-}
-
-
-
-/* RESPONSIVT */
-@media (max-width: 1100px){
-  .phone-grid{ grid-template-columns: repeat(4, 280px);
-  gap: 16px 24px;
-  justify-content: center;}
-  .iphone-card{ --w: 210px; }
-}
-@media (max-width: 680px){
-  .phone-grid{ grid-template-columns: 1fr; }
-  .iphone-card{ --w: 200px; }
-}
-
-
-
-/* --- Samle telefonane i 3 kolonnar, tettare mellomrom, sentrert --- */
+/* 4–3–4–3 layout med tett spacing */
 .phone-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 280px);  /* breidde per telefon */
-  gap: 16px 18px; 
-  column-gap: 6px; 
-  justify-content: center;                   /* midt på sida */
-  align-items: start;
+  --hgap: 12px;   /* horisontal avstand mellom telefoner */
+  --vgap: 10px;   /* vertikal avstand mellom radene */
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-0.5 * var(--hgap));
+  margin-right: calc(-0.5 * var(--hgap));
 }
 
-/* Litt større telefonar? juster her (også i .iphone-card-regelen din) */
-.iphone-card{ --w: 280px; }
+/* standard: 4 per rad (25%) */
+.phone-grid .iphone-card{
+  margin: 0 calc(0.5 * var(--hgap)) var(--vgap);
+  flex: 0 0 calc(25% - var(--hgap));
+}
 
-/* --- Stagger / trappetrinn-effekt --- */
-.phone-grid .iphone-card:nth-child(3n+2){ margin-top: 60px; }  /* kolonne 2 */
-.phone-grid .iphone-card:nth-child(3n+3){ margin-top: 120px; } /* kolonne 3 */
+/* rad 2 (og 5, 8, …): 3 per rad (33.333%) */
+.phone-grid .iphone-card:nth-child(7n+5),
+.phone-grid .iphone-card:nth-child(7n+6),
+.phone-grid .iphone-card:nth-child(7n+7){
+  flex-basis: calc(33.333% - var(--hgap));
+}
 
-/* Valfritt: jamn ut siste raden litt når det blir mange kort */
-.phone-grid .iphone-card:last-child{ margin-bottom: 40px; }
+/* vil du ha enda tettere mellom radene? senk --vgap, f.eks. 6px */
+/* vil du ha dem enda nærmere hverandre horisontalt? senk --hgap */
 
-/* --- Responsivt --- */
+/* RESPONSIVE fallbacks */
 @media (max-width: 1100px){
-  .phone-grid{
-    grid-template-columns: repeat(4, 260px);
-    gap: 8px 14px;
-    column-gap: 6px;
+  /* to per rad */
+  .phone-grid .iphone-card{
+    flex-basis: calc(50% - var(--hgap));
   }
-  .phone-grid .iphone-card{ margin-top: 0; }   /* slå av stagger på 2 kolonnar */
-  .phone-grid .iphone-card:nth-child(2n){ margin-top: 20px; } /* mild stagger */
+  .phone-grid .iphone-card:nth-child(7n+5),
+  .phone-grid .iphone-card:nth-child(7n+6),
+  .phone-grid .iphone-card:nth-child(7n+7){
+    flex-basis: calc(50% - var(--hgap)); /* hold 2 per rad på mellomstore skjermer */
+  }
 }
 @media (max-width: 640px){
-  .phone-grid{
-    grid-template-columns: 1fr;               /* éi kolonne på mobil */
-    justify-items: center;
+  /* én per rad på mobil */
+  .phone-grid .iphone-card{
+    flex-basis: calc(100% - var(--hgap));
   }
-  .iphone-card{ --w: 260px; }
-  .phone-grid .iphone-card{ margin-left: 0; margin-right: 0; }
 }
 
 
