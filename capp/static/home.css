@@ -1,24 +1,21 @@
 /* ================================
-   Palett + typografi (juster fritt)
+   Palett + typografi
    ================================ */
 :root{
-  --green-deep: #1f4d2e;     /* hovudgrøn (overskrifter/knapp) */
+  --green-deep: #1f4d2e;     /* overskrifter/knapp */
   --green-sage: #6f8e6a;     /* kort-bakgrunn */
   --blue-pastel:#cfe1e8;     /* toppseksjon-bakgrunn */
   --cream-warm: #f3eddc;     /* midtseksjon-bakgrunn */
   --ink:        #1c1c1c;     /* brødtekst */
-  --ink-muted:  #36443b;
   --white:      #ffffff;
   --shadow:     0 8px 20px rgba(0,0,0,.12);
   --radius:     16px;
 }
 
-/* Du kan evt. hente ein “tyngre” serif til overskriftene:
-   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap');
-*/
 html,body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--ink);
+  margin: 0;
 }
 
 /* ================================
@@ -30,23 +27,25 @@ p{
   line-height: 1.55;
   color: var(--ink);
 }
+
 h1,h2,h3{
   color: var(--green-deep);
   letter-spacing: .3px;
-  line-height: 1.1;
-   
+  line-height: 1.15;
+  margin: 0 0 .4em 0;
+}
 h1{
-  font-size: clamp(28px, 6vw, 56px);  /* før: opptil 88px */
+  font-size: clamp(28px, 6vw, 56px);
   font-weight: 800;
   text-transform: uppercase;
 }
 h2{
-  font-size: clamp(22px, 3.5vw, 32px); /* før: opptil 40px */
+  font-size: clamp(22px, 3.5vw, 32px);
   font-weight: 800;
   text-transform: uppercase;
 }
 h3{
-  font-size: 20px; /* før: 24px */
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -67,7 +66,7 @@ h3{
 }
 .header_home .box{
   flex: 1;
-  background: transparent;   /* rein bakgrunn lik mal */
+  background: transparent;
   color: var(--ink);
   border-radius: var(--radius);
   margin: 0;
@@ -89,18 +88,24 @@ h3{
   background: var(--cream-warm);
   padding: 24px 0 32px;
 }
+
 .developers{
-  display:flex; align-items: stretch; gap: 24px;
+  display:flex;
+  flex-wrap: wrap;        /* legg kort i rader */
+  align-items: stretch;
+  gap: 24px;
   background: var(--cream-warm);
   padding: 8px;
-  flex-wrap: wrap;           /* radbryting for mindre skjermer */
 }
-.developers .box{
-  flex: 1 1 320px;           /* kortbreidde ~ som i malen */
+
+/* Støtt både .box og .box2 som kort */
+.developers .box,
+.developers .box2{
+  flex: 1 1 320px;        /* min-breidde per kort */
+  max-width: 480px;       /* ikkje bli for brei */
   background: var(--green-sage);
   color: var(--white);
   border-radius: var(--radius);
-  margin: 0;
   padding: 24px 20px 20px;
   text-align: center;
   display: flex;
@@ -109,23 +114,33 @@ h3{
   gap: 8px;
   box-shadow: var(--shadow);
   border: 1px solid rgba(0,0,0,.05);
+  margin: 0;             /* vi brukar gap i staden */
 }
-.developers .box h3{
+
+.developers .box h3,
+.developers .box2 h3{
   color: var(--white);
-  margin: 8px 0 0;
+  margin-top: 8px;
 }
-.developers .box p{
+.developers .box p,
+.developers .box2 p{
   color: rgba(255,255,255,.92);
   margin: 4px 0 8px;
   font-size: 16px;
 }
 
-/* runde profilbilete med svak skygge */
-.developers .box img{
-  width: 160px; height:160px; object-fit: cover;
+/* Runde profilbilete – utan ramme/skygge */
+.developers .box img,
+.developers .box2 img,
+img.avatar{
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 6px 14px rgba(0,0,0,.18);
-  border: 6px solid rgba(255,255,255,.35);
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent;
 }
 
 /* ================================
@@ -142,7 +157,7 @@ h3{
   color: var(--white);
   background: var(--green-deep);
   border: none;
-  border-radius: 999px;      /* pill */
+  border-radius: 999px;     /* pill */
   text-decoration:none;
   font-size: 14px;
   font-weight: 700;
@@ -160,12 +175,10 @@ h3{
 /* ================================
    Responsivt
    ================================ */
-@media (max-width: 1024px){
-  h1{ font-size: clamp(36px, 10vw, 72px); }
+@media (max-width:1024px){
+  h1{ font-size: clamp(26px, 6.5vw, 48px); }
 }
 @media (max-width:768px){
   .header_home{ flex-direction: column; text-align:left; }
   .developers{ flex-direction: column; }
 }
-
-
