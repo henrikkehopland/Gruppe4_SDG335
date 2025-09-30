@@ -4,7 +4,6 @@
 .section_carbon_app_navbar{
   width: 100%;
   background:#fff;
-  border-bottom: 0px solid rgba(0,0,0,.08);
 }
 
 /* Fjern max-width for container KUN i headeren */
@@ -151,6 +150,7 @@
 .section_carbon_app_navbar .container{
   padding-left: 36px; /* øk/reduser etter behov */
 }
+
 
 
 
