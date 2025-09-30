@@ -336,7 +336,7 @@ iphone kortet
 
 /* --- Stagger / trappetrinn-effekt --- */
 .phone-grid .iphone-card:nth-child(3n+2){ margin-top: 60px; }  /* kolonne 2 */
-.phone-grid .iphone-card:nth-child(3n+3){ margin-top: 120px; } /* kolonne 3 */
+.phone-grid .iphone-card:nth-child(3n+3){ margin-top: 100px; } /* kolonne 3 */
 
 /* Valfritt: jamn ut siste raden litt når det blir mange kort */
 .phone-grid .iphone-card:last-child{ margin-bottom: 40px; }
@@ -358,6 +358,7 @@ iphone kortet
   .iphone-card{ --w: 260px; }
   .phone-grid .iphone-card{ margin-top: 0; }  /* ingen stagger på mobil */
 }
+
 
 
 
