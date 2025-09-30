@@ -1,127 +1,170 @@
-/* Colors 
-Home, section 1 (head, background): #9fa7bf
-Home, section 1 (head, boxes): #568c63
-Home, section 2 (developers, background): #c5c8d9 
-Home, section 2 (developers, boxes): #49736f
- */
+/* ================================
+   Palett + typografi (juster fritt)
+   ================================ */
+:root{
+  --green-deep: #1f4d2e;     /* hovudgrøn (overskrifter/knapp) */
+  --green-sage: #6f8e6a;     /* kort-bakgrunn */
+  --blue-pastel:#cfe1e8;     /* toppseksjon-bakgrunn */
+  --cream-warm: #f3eddc;     /* midtseksjon-bakgrunn */
+  --ink:        #1c1c1c;     /* brødtekst */
+  --ink-muted:  #36443b;
+  --white:      #ffffff;
+  --shadow:     0 8px 20px rgba(0,0,0,.12);
+  --radius:     16px;
+}
 
-/* Utilities  */
-p {
+/* Du kan evt. hente ein “tyngre” serif til overskriftene:
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+*/
+html,body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+}
+
+/* ================================
+   Utilities
+   ================================ */
+p{
   margin: 10px 0;
   font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink);
 }
-/* Section header_home */
-.section_header_home {
-  background-color:#9fa7bf;
+h1,h2,h3{
+  color: var(--green-deep);
+  letter-spacing: .3px;
+  line-height: 1.1;
 }
-.header_home {
-  display: flex;  
-  align-items: start;
-  background: #9fa7bf;
+h1{
+  font-size: clamp(40px, 8vw, 88px);
+  font-weight: 800;
+  text-transform: uppercase;
 }
-.header_home .box {
+h2{
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+h3{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ================================
+   Section: header_home (topp)
+   ================================ */
+.section_header_home{
+  background: var(--blue-pastel);
+  padding: 24px 0;
+}
+.header_home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: var(--blue-pastel);
+  padding: 12px 8px 32px;
+}
+.header_home .box{
   flex: 1;
-  background: #9fa7bf;
-  color: #fff;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
+  background: transparent;   /* rein bakgrunn lik mal */
+  color: var(--ink);
+  border-radius: var(--radius);
+  margin: 0;
+  padding: 16px 20px;
+  text-align: left;
 }
-.header_home .box:nth-of-type(1) {
-  flex-grow:2;
+.header_home .box:nth-of-type(1){ flex-grow: 2; }
+.header_home .box:nth-of-type(2){ flex-grow: 1; }
+
+.container_buttons_links_header_home{
+  display:flex; justify-content:flex-start; align-items:center; flex-wrap:wrap; gap:12px;
 }
-.header_home .box:nth-of-type(2) {
-  flex-grow:1;
+.container_buttons_links_header_home a:hover{ color: var(--green-deep); }
+
+/* ================================
+   Section: developers (midt)
+   ================================ */
+.section_developers{
+  background: var(--cream-warm);
+  padding: 24px 0 32px;
 }
-.container_buttons_links_header_home {
+.developers{
+  display:flex; align-items: stretch; gap: 24px;
+  background: var(--cream-warm);
+  padding: 8px;
+  flex-wrap: wrap;           /* radbryting for mindre skjermer */
+}
+.developers .box{
+  flex: 1 1 320px;           /* kortbreidde ~ som i malen */
+  background: var(--green-sage);
+  color: var(--white);
+  border-radius: var(--radius);
+  margin: 0;
+  padding: 24px 20px 20px;
+  text-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  flex-wrap:wrap;
+  gap: 8px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,.05);
 }
-.container_buttons_links_header_home a:hover {
-  color: #9fa7bf;
+.developers .box h3{
+  color: var(--white);
+  margin: 8px 0 0;
 }
-.container_buttons_links_header_home btn {
-  width: 100px;
-  height: 100px;
-  background: #9fa7bf;
-  color: #fff;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-}
-/* Section developers */
-.section_developers {
-  background-color:#c5c8d9;
-}
-.developers {
-  display: flex;  
-  align-items: start;
-  background: #c5c8d9;
-}
-.developers .box {
-  flex: 1;
-  background: #49736f;
-  color: black;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-}
-.developers .box:nth-of-type(1) {
-  flex-grow:4;
-}
-.developers .box:nth-of-type(2) {
-  flex-grow:4;
-}
-.developers .box:nth-of-type(3) {
-  flex-grow:4;
+.developers .box p{
+  color: rgba(255,255,255,.92);
+  margin: 4px 0 8px;
+  font-size: 16px;
 }
 
-.section_container_buttons_developers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap:wrap;
-  padding: 0px 0px;
-  margin: 0px 0px;
-}
-.btn_developers {
-  padding: 10px 10px;
-  margin: 10px 10px 10px 10px;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 18px;
-  background-color: #49736f;
-  border: 2px solid  #c5c8d9;
-}
-.btn_developers:hover {
-  color: #fff;
-  background-color: #c5c8d9;
-  border: 2px solid #c5c8d9;
-  text-decoration: none;
+/* runde profilbilete med svak skygge */
+.developers .box img{
+  width: 160px; height:160px; object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+  border: 6px solid rgba(255,255,255,.35);
 }
 
+/* ================================
+   Knapp (pill)
+   ================================ */
+.section_container_buttons_developers{
+  display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:12px;
+  padding: 8px 0 0;
+}
+.btn_developers{
+  display:inline-block;
+  padding: 12px 22px;
+  margin: 4px 0 0;
+  color: var(--white);
+  background: var(--green-deep);
+  border: none;
+  border-radius: 999px;      /* pill */
+  text-decoration:none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  box-shadow: var(--shadow);
+  transition: transform .08s ease, filter .2s ease;
+}
+.btn_developers:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  color: var(--white);
+}
 
-@media (max-width:768px) { 
-  .header_home {
-    flex-direction: column;
-  } 
-  .developers {
-    flex-direction: column;
-  } 
-  .section_container_buttons_developers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
+/* ================================
+   Responsivt
+   ================================ */
+@media (max-width: 1024px){
+  h1{ font-size: clamp(36px, 10vw, 72px); }
+}
+@media (max-width:768px){
+  .header_home{ flex-direction: column; text-align:left; }
+  .developers{ flex-direction: column; }
 }
 
