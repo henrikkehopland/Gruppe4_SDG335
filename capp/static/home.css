@@ -345,7 +345,7 @@ iphone kortet
 @media (max-width: 1100px){
   .phone-grid{
     grid-template-columns: repeat(3, 260px);
-    gap: 8px 24px;
+    gap: 8px 14px;
   }
   .phone-grid .iphone-card{ margin-top: 0; }   /* slå av stagger på 2 kolonnar */
   .phone-grid .iphone-card:nth-child(2n){ margin-top: 40px; } /* mild stagger */
@@ -358,6 +358,7 @@ iphone kortet
   .iphone-card{ --w: 260px; }
   .phone-grid .iphone-card{ margin-top: 0; }  /* ingen stagger på mobil */
 }
+
 
 
 
