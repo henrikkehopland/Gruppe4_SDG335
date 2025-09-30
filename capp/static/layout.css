@@ -54,7 +54,9 @@ img {
   height: 70px;
   align-items: center;
   background-color: #ffffff;
-  padding: 0 0px;
+  max-width: 1400px;      /* prøv 1280–1440 etter smak */
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .carbon_app_navbar a {
   color: #ffffff;
@@ -110,5 +112,6 @@ img {
     border-bottom: #2a4359 2px solid;
   }
 }
+
 
 
