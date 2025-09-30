@@ -243,7 +243,7 @@ iphone kortet
 
 /* iPhone-ramme som bakgrunn */
 .iphone-card{
-  --w: 260px;                 /* bredden på telefonen, juster fritt */
+  --w: 320px;                 /* bredden på telefonen, juster fritt */
   width: var(--w);
   height: calc(var(--w) * 19.5 / 9);
   aspect-ratio: 9 / 19.5;
@@ -256,8 +256,13 @@ iphone kortet
 
 /* Skjermen ligger INNI ramma – fyll, runde hjørner */
 .iphone-card .screen{
-  position: absolute;
-  /* finjuster disse prosentene til ramma di passer perfekt */
+  display: flex;
+  flex-direction: column;        /* namn over bilde */
+  justify-content: flex-start;   /* start øverst, vi lager luft med padding */
+  align-items: center;
+  gap: 10px;
+  padding: 16px 12px;
+  position: absolute;/* finjuster disse prosentene til ramma di passer perfekt */
   top: 8.2%;
   bottom: 7.2%;
   left: 7.8%;
@@ -279,7 +284,7 @@ iphone kortet
 
 /* Bildet på skjermen – stort og midtstilt */
 .iphone-card .photo{
-  width: 78%;                  /* juster 70–85% etter smak */
+  width: 82%;                  /* juster 70–85% etter smak */
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 18px;
@@ -291,7 +296,7 @@ iphone kortet
 /* Tekst under bildet */
 .iphone-card h3{
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -312,6 +317,7 @@ iphone kortet
   .phone-grid{ grid-template-columns: 1fr; }
   .iphone-card{ --w: 200px; }
 }
+
 
 
 
