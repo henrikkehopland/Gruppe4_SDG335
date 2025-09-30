@@ -35,7 +35,6 @@ h1,h2,h3{
   letter-spacing: .3px;
   line-height: 1.1;
    
-/* Mindre overskrifter */
 h1{
   font-size: clamp(28px, 6vw, 56px);  /* før: opptil 88px */
   font-weight: 800;
@@ -50,7 +49,6 @@ h3{
   font-size: 20px; /* før: 24px */
   font-weight: 700;
 }
-
 
 /* ================================
    Section: header_home (topp)
@@ -95,10 +93,10 @@ h3{
   display:flex; align-items: stretch; gap: 24px;
   background: var(--cream-warm);
   padding: 8px;
-  flex-wrap: wrap;         
+  flex-wrap: wrap;           /* radbryting for mindre skjermer */
 }
 .developers .box{
-  flex: 1 1 320px;          
+  flex: 1 1 320px;           /* kortbreidde ~ som i malen */
   background: var(--green-sage);
   color: var(--white);
   border-radius: var(--radius);
@@ -124,14 +122,10 @@ h3{
 
 /* runde profilbilete med svak skygge */
 .developers .box img{
-  width: 160px;
-  height: 160px;         
+  width: 160px; height:160px; object-fit: cover;
   border-radius: 50%;
-  object-fit: cover;    
-  border:6px solid rgba(255,255,255,.35);
-  outline: none !important;
-  box-shadow:  0 6px 14px rgba(0,0,0,.18);
-  background: transparent;
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+  border: 6px solid rgba(255,255,255,.35);
 }
 
 /* ================================
@@ -173,7 +167,5 @@ h3{
   .header_home{ flex-direction: column; text-align:left; }
   .developers{ flex-direction: column; }
 }
-
-
 
 
