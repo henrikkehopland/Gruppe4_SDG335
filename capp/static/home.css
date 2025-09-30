@@ -216,7 +216,7 @@ Iphone ramme
   width: var(--w);
   aspect-ratio: 9 / 19.5;                 /* høg telefon */
   position: relative;
-  background: url("{{ url_for('static', filename='images/iphone-frame.png') }}") center/contain no-repeat;
+  background: url("{{ url_for('static', filename='icons/iphone-frame.png') }}") center/contain no-repeat;
 }
 
 /* “Skjermen” (innhaldet) legg vi oppå bakgrunnsramma */
@@ -270,6 +270,7 @@ Iphone ramme
   .phone-grid{ grid-template-columns: 1fr; }
   .iphone-card{ --w: 200px; }
 }
+
 
 
 
