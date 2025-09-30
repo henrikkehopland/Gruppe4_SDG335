@@ -157,6 +157,11 @@
   box-shadow: none; /* valgfritt */
 }
 
+/* legg dette ETTER header-reglene */
+.section_carbon_app_navbar{
+  border-bottom: 0 !important;
+  box-shadow: none;
+}
 
 
 
