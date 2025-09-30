@@ -284,7 +284,7 @@ iphone kortet
 
 /* Bildet på skjermen – stort og midtstilt */
 .iphone-card .photo{
-  width: 82%;                  /* juster 70–85% etter smak */
+  width: 70%;                  /* juster 70–85% etter smak */
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 18px;
@@ -317,6 +317,7 @@ iphone kortet
   .phone-grid{ grid-template-columns: 1fr; }
   .iphone-card{ --w: 200px; }
 }
+
 
 
 
