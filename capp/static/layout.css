@@ -1,139 +1,112 @@
-/* Colors */
-/* Rainy theme 5 -Green Digitalization Course and Students Apps-:
-Navbar (background): #8bbbd9
-Navbar (a hover): #466fa6
-Navbar (logo): #568c63
-Navbar (a menu): #2a4359
-*/
+/* ==== HEADER: full bredde + sentrert meny + grønn hover/aktiv ==== */
 
-/* Google fonts Roboto  */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
-
-/* CSS utilities */
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #fff;
-  line-height: 1.6;
-}
-.container {
-  margin: auto;
-  max-width: 1320px;
-}
-ul { 
-  list-style: none;
-  font-size: 400;
-}
-a {
-  color: #333;
-  text-decoration: none;
-}
-h1, h2 {
-  font-weight: 400;
-  line-height: 1.2;
-}
-p {
-  margin: 10px 0;
-  font-size: 14px;
-}
-img {
+/* Ytre seksjon i full bredde med subtil bunnlinje */
+.section_carbon_app_navbar{
   width: 100%;
-}
-/* Navbar  */
-.section_carbon_app_navbar {
-  background-color:#ffffff;
-  width: 100%;
-  border-bottom: 1px solid rgba(0,0,0,.06);
-
+  background:#fff;
+  border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
+/* Fjern max-width for container KUN i headeren */
 .section_carbon_app_navbar .container{
-  max-width: none;      /* juster 1280–1440 etter smak */
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.carbon_app_navbar {
-  width: 100%;
   max-width: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* logo | meny | høyre */
-  align-items: center;
-  gap: 16px;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-.carbon_app_navbar a {
+/* Radoppsett: logo | meny | (valgfri høyre) */
+.carbon_app_navbar{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 16px;
+  height: 76px;
+  background: #fff;
+  padding: 0;
+}
+
+/* Logo (venstre) */
+.carbon_app_navbar .logo{
+  margin: 0;
+  font-size: 28px;
+  line-height: 1;
+}
+.text-logo{ color:#568c63; }
+
+/* Meny (midtstilt) */
+.carbon_app_navbar nav{ width: 100%; }
+.carbon_app_navbar ul{
+  display: flex;
+  gap: 20px;
+  justify-content: center;     /* sentrer menyen */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Lenker: normal + hover */
+.carbon_app_navbar a{
+  position: relative;
   color: #2a4359;
-  padding: 10px 12px;
-  margin: 0 4px;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 8px 2px;
   text-decoration: none;
-  border-bottom: 4px solid transparent;
 }
 .carbon_app_navbar a:hover{
-  color: #466fa6;
-  border-bottom-color: #2a4359;
+  color: #2a4359;
 }
-.carbon_app_navbar ul {
-  display: flex;
-  flex-direction: row;
-  justify-self: center;   /* sentrer i grid-spalta */
-  gap: 8px;
-  margin: 0;
+.carbon_app_navbar a::after{
+  /* grønn underline-pill ved hover */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 6px;
+  border-radius: 4px;
+  background: transparent;
+  transition: background .18s ease, transform .18s ease;
+}
+.carbon_app_navbar a:hover::after{
+  background: #6ecf83;       /* lys grønn highlight */
+  transform: translateY(-1px);
 }
 
+/* Marker "Home" som aktiv uten å endre HTML (3. element i lista) */
+.carbon_app_navbar ul li:nth-child(3) > a::after{
+  background: #6ecf83;
+}
+.carbon_app_navbar ul li:nth-child(3) > a{
+  font-weight: 700;
+}
+
+/* Høyreside (om du senere har profil e.l.) */
 .carbon_app_navbar .right{
   justify-self: end;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.carbon_app_navbar .logo {
-  font-weight: 400;
-  margin: 0;
-}
-.text-logo {
-  color: #568c63;
-}
-/* Footer  */
-.section_footer{
-  background-color:#ffffff;
-}
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 70px;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 0 0px;
-}
-
-
-/* Media query */
-@media(max-width:768px){
-  .carbon_app_navbar {
-    height: 180px;
-    flex-direction: column;
+/* Mobil: stable logo over meny */
+@media (max-width: 768px){
+  .carbon_app_navbar{
+    grid-template-columns: 1fr;
+    height: auto;
+    row-gap: 8px;
+    padding: 10px 0 6px;
   }
-  .carbon_app_navbar a {
+  .carbon_app_navbar ul{
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .carbon_app_navbar a{
     font-size: 15px;
-    padding: 5px 20px;
+    padding: 6px 2px;
   }
-  .carbon_app_navbar ul {
-    display: flex;
-    flex-direction: column;
-  }
-  .carbon_app_navbar a:hover{
-    color: #568c63;
-    border-bottom: #2a4359 2px solid;
-  }
+  .carbon_app_navbar a::after{ bottom: -6px; height: 4px; }
 }
 
 
