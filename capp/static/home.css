@@ -345,12 +345,12 @@ iphone kortet
 /* --- Responsivt --- */
 @media (max-width: 1100px){
   .phone-grid{
-    grid-template-columns: repeat(3, 260px);
+    grid-template-columns: repeat(4, 260px);
     gap: 8px 14px;
     column-gap: 6px;
   }
   .phone-grid .iphone-card{ margin-top: 0; }   /* slå av stagger på 2 kolonnar */
-  .phone-grid .iphone-card:nth-child(2n){ margin-top: 40px; } /* mild stagger */
+  .phone-grid .iphone-card:nth-child(2n){ margin-top: 20px; } /* mild stagger */
 }
 @media (max-width: 640px){
   .phone-grid{
@@ -358,8 +358,9 @@ iphone kortet
     justify-items: center;
   }
   .iphone-card{ --w: 260px; }
-  .phone-grid .iphone-card{ margin-top: 0; }  /* ingen stagger på mobil */
+  .phone-grid .iphone-card{ margin-left: 0; margin-right: 0; }
 }
+
 
 
 
