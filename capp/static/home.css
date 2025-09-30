@@ -50,6 +50,12 @@ font-size: 20px;
 font-weight: 700;
 }
 
+/* Mer luft rett før overskrifta */
+.dev-phones h2{
+  margin-top: 56px;    /* juster tallet */
+}
+
+
 /* ================================
 Section: header_home (topp)
 ================================ */
@@ -308,6 +314,7 @@ video
 /* Tittel- og tekstfargar inne i kortet */
 .iphone-card .screen h3{ color: var(--green-deep); }
 .iphone-card p{ color:#3e3e3e; }
+
 
 
 
